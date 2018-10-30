@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prime1" translatesAutoresizingMaskIntoConstraints="NO" id="ztp-qj-Jdk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OB-gn-QT6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="75"/>
                                 <subviews>
@@ -35,22 +38,25 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SDa-P2-Uqr">
-                                <rect key="frame" x="16" y="115" width="343" height="225"/>
+                                <rect key="frame" x="16" y="115" width="343" height="172.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a whole number." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFH-Cu-oBQ">
-                                        <rect key="frame" x="16" y="0.0" width="311" height="33"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <rect key="frame" x="16" y="0.0" width="311" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                         <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter.." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwO-et-Sz5">
-                                        <rect key="frame" x="16" y="53" width="311" height="37"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. 643" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwO-et-Sz5">
+                                        <rect key="frame" x="16" y="50.5" width="311" height="37"/>
                                         <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="g3c-91-ySq"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsQ-Xb-PHK">
-                                        <rect key="frame" x="16" y="110" width="311" height="45"/>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsQ-Xb-PHK">
+                                        <rect key="frame" x="16" y="107.5" width="311" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="ENTER">
@@ -60,10 +66,11 @@
                                             <action selector="isItPrimeBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rn8-rf-YHh"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj2-5g-ZWl">
-                                        <rect key="frame" x="16" y="175" width="311" height="50"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
-                                        <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj2-5g-ZWl">
+                                        <rect key="frame" x="16" y="172.5" width="311" height="0.0"/>
+                                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -81,16 +88,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ztp-qj-Jdk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HP2-1U-WdP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SDa-P2-Uqr" secondAttribute="trailing" constant="16" id="LSD-FG-Dkw"/>
                             <constraint firstItem="3OB-gn-QT6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mzz-sz-xJS"/>
                             <constraint firstItem="3OB-gn-QT6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Oea-bv-yhf"/>
                             <constraint firstItem="SDa-P2-Uqr" firstAttribute="top" secondItem="3OB-gn-QT6" secondAttribute="bottom" constant="20" id="XKQ-IX-lRV"/>
                             <constraint firstItem="3OB-gn-QT6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zaf-S6-fWg"/>
+                            <constraint firstItem="ztp-qj-Jdk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gnI-W2-eBO"/>
+                            <constraint firstItem="ztp-qj-Jdk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pvf-wj-GUS"/>
                             <constraint firstItem="SDa-P2-Uqr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uOR-5K-bsn"/>
+                            <constraint firstItem="ztp-qj-Jdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zeZ-TK-mCP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="enterBtn" destination="YsQ-Xb-PHK" id="zmC-dP-PJa"/>
                         <outlet property="primeLbl" destination="Lj2-5g-ZWl" id="nxF-BS-dQD"/>
                         <outlet property="primeTextField" destination="IwO-et-Sz5" id="gfW-Tq-bZ0"/>
                     </connections>
@@ -100,4 +112,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="prime1" width="1600" height="1200"/>
+    </resources>
 </document>
